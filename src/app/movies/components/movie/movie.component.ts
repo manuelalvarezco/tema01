@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Movie } from '../../interfaces/movie';
 
 @Component({
   selector: 'app-movie',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieComponent implements OnInit {
 
+  @Input() movie:any;
+  @Output() movieClicked:EventEmitter<any> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addFavorites(){
+    console.log('añadido');
+    this.movieClicked.emit(this.movie.id);
   }
 
 }

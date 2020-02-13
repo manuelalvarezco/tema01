@@ -1,22 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Movie } from '../interfaces/movie';
 import {  map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class MovieService {
-
-  // https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg
+export class MoviesService {
+  
+   // https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg
   // https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png
 
 
 
   private apikey:string = "a141476b1338ea5c7ec9b6ab6a812869";
   private urlmovie:string = "https://api.themoviedb.org/3";
-
-
 
   constructor(private http: HttpClient) { }
 

@@ -6,6 +6,7 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     MoviesRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ]
 })
 export class MoviesModule { }
