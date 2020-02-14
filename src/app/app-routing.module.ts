@@ -21,7 +21,11 @@ const routes: Routes = [
         path:'movies',
         loadChildren:()=> import('./movies/movies.module').then(movie=>movie.MoviesModule)
       }
-    ]
+    ],
+  },
+  {
+    path:'admin',
+    loadChildren:()=> import('./admin/admin.module').then(movie=>movie.AdminModule)
   }
   
 ];
