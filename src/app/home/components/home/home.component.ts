@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from 'src/app/core/services/movies.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  movies:any[] = [];
+
+  constructor(private movieService:MoviesService) { }
 
   ngOnInit(): void {
+    this.movieService.getCartelera()
+    .subscribe(data=>{
+      console.log(data);
+      this.movies = data
+    })
+  }
+
+  clickMovie(id:string){
+    console.log('Movie');
+    console.log(id);
   }
 
 }

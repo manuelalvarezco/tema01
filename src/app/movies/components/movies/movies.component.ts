@@ -13,11 +13,11 @@ export class MoviesComponent implements OnInit {
   constructor(private movieService:MoviesService) { }
 
   ngOnInit(): void {
-    this.movieService.getPopular()
-      .subscribe( (resp)=>{
-        console.log(resp)
-        this.movies = resp
-      } )
+    this.movieService.getCartelera()
+    .subscribe(data=>{
+      console.log(data);
+      this.movies = data
+    })
   }
 
   clickMovie(id:string){

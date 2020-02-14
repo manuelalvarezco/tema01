@@ -1,0 +1,19 @@
+mat-toolbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.toolbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.toolbar-items {
+    display: flex;
+}
+
+.toolbar__item {
+    margin: 0 12px;
+}

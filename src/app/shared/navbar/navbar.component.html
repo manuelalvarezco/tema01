@@ -1,1 +1,20 @@
-<h1>navbar</h1>
+<mat-toolbar>
+    <div class="toolbar">
+        <div class="toolbar__logo">
+            MovieApp
+        </div>
+        <div class="toolbar-items">
+            <div class="toolbar__item">Home</div>
+            <div class="toolbar__item">
+                <a [routerLink]="['/movies']" routerLinkActive="router-link-active">Movies</a>
+            </div>
+            <div class="toolbar__item">Series</div>
+            <div class="toolbar__item">Recently added</div>
+        </div>
+        <div class="toolbar__btnSearch">
+            <button mat-icon-button color="primary" aria-label="search">
+                <mat-icon>search</mat-icon>
+              </button>
+        </div>
+    </div>
+</mat-toolbar>
