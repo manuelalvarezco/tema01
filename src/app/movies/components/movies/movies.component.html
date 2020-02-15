@@ -1,15 +1,7 @@
-<div class="carrousel">
-    <div class="carrousel__container">
-        <div class="carrousel-item" *ngFor="let movie of movies">
+<div class="row">
+    <div class="col-xs-12">
+        <div class="col-lg-3" *ngFor="let movie of movies">
             <app-movie (movieClicked)="clickMovie($event)" [movie]="movie"></app-movie>
         </div>
-    </div>
-    <div class="carrousel-buttons">
-        <button class="carrousel-button__icon" mat-icon-button aria-label="keyboard_arrow_left">
-            <mat-icon>keyboard_arrow_left</mat-icon>
-        </button>
-        <button class="carrousel-button__icon" mat-icon-button aria-label="keyboard_arrow_right">
-            <mat-icon>keyboard_arrow_right</mat-icon>
-        </button>
     </div>
 </div>

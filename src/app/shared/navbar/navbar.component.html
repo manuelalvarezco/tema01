@@ -4,7 +4,10 @@
             MovieApp
         </div>
         <div class="toolbar-items">
-            <div class="toolbar__item">Home</div>
+            <div class="toolbar__item">
+                <a [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
+
+            </div>
             <div class="toolbar__item">
                 <a [routerLink]="['/movies']" routerLinkActive="router-link-active">Movies</a>
             </div>

@@ -2,13 +2,12 @@
     display: flex;
     width: 100%;
     overflow: scroll;
-    padding: 30px;
+    padding-top: 30px;
 }
 
 .carrousel__container {
     display: flex;
     padding-bottom: 10px;
-    margin: 0 30px;
     transition: .45s all;
     &:hover {
         .carrousel-item {
@@ -25,8 +24,8 @@
 
 .carrousel-item {
     background-color: red;
-    width: 800px;
-    height: 350px;
+    width: 770px;
+    height: 280px;
     border-radius: 20px;
     overflow: hidden;
     margin-right: 10px;
@@ -42,7 +41,7 @@
 
 .carrousel-buttons {
     position: absolute;
-    right: 0;
+    right: 50px;
     display: flex;
     align-self: flex-end;
     padding-bottom: 20px;
@@ -50,4 +49,125 @@
 
 .carrousel-button__icon {
     color: white;
+}
+
+.carrousel-item__image {
+    width: 800px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.carrousel-item__details {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background: linear-gradient(to top, rgba(37, 34, 34, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 1;
+    transition: .45s opacity;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carrousel-item__options {
+    width: 200px;
+}
+
+.carrouse-item__details--title {
+    color: white;
+    font-size: 20px;
+}
+
+.carrouse-item__details--description {
+    font-size: 12px;
+    color: white;
+}
+
+.main-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.main-filters__items--btn {
+    margin: 0 7px;
+}
+
+.movies {
+    margin-top: 2%;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.movie-info--title {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.movie-slider {
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+    padding: 30px 0;
+}
+
+.movie-slider__container {
+    display: flex;
+    padding-bottom: 10px;
+    transition: .45s all;
+    &:hover {
+        .movie-slider__item {
+            opacity: 0.3;
+        }
+        .movie-slider__item {
+            &:hover {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.movie-slider__item {
+    background-color: red;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+    transition: .45s all;
+    transform-origin: center left;
+    &:hover {
+        transform: translate3d(100px, 0, 0);
+    }
+}
+
+.movie-slider-item__image {
+    width: 292px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.movie-slider-buttons {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    align-self: flex-end;
+    padding-bottom: 20px;
+}
+
+.movie-slider-button__icon {
+    color: rgb(22, 17, 17);
 }

@@ -1,7 +1,13 @@
 <div class="carrousel">
     <div class="carrousel__container">
         <div class="carrousel-item" *ngFor="let movie of movies">
-
+            <img class="carrousel-item__image" src="https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}" alt="movie">
+            <div class="carrousel-item__details">
+                <div class="carrousel-item__options">
+                    <p class="carrouse-item__details--title">{{movie.title}}</p>
+                    <p class="carrouse-item__details--description">{{movie.overview | slice:0:70}}...</p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="carrousel-buttons">
@@ -12,4 +18,58 @@
             <mat-icon>keyboard_arrow_right</mat-icon>
         </button>
     </div>
+</div>
+<div class="main">
+    <section class="main-filters">
+        <mat-form-field class="main-filters__items">
+            <mat-label>Genres</mat-label>
+            <mat-select name="food">
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                    {{food.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+
+        <div class="main-filters__items">
+            <button class="main-filters__items--btn" mat-raised-button aria-label="menu">
+                <mat-icon>menu</mat-icon>
+              </button>
+            <button class="main-filters__items--btn" mat-raised-button aria-label="apps">
+                <mat-icon>apps</mat-icon>
+              </button>
+        </div>
+    </section>
+    <section class="movies">
+        <div class="movie-info">
+            <span class="movie-info--title">POPULAR RIGHT NOW</span>
+            <div class="movie-info--more">
+                <span>SEE ALL</span>
+                <button class="" mat-icon-button aria-label="keyboard_arrow_right">
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div class="box-movies">
+            <div class="row movie-slider">
+                <div class="col-xs-12 movie-slider__container">
+                    <div class="col-lg-3 movie-slider__item" *ngFor="let movie of movies">
+                        <img class="movie-slider-item__image" src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="movie">
+
+                    </div>
+                </div>
+                <div class="movie-slider-buttons">
+                    <button class="movie-slider-button__icon" mat-icon-button aria-label="keyboard_arrow_left">
+                        <mat-icon>keyboard_arrow_left</mat-icon>
+                    </button>
+                    <button class="movie-slider-button__icon" mat-icon-button aria-label="keyboard_arrow_right">
+                        <mat-icon>keyboard_arrow_right</mat-icon>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 </div>
