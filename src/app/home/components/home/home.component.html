@@ -1,7 +1,7 @@
 <div class="carrousel">
     <div class="carrousel__container">
         <div class="carrousel-item" *ngFor="let movie of movies">
-            <img class="carrousel-item__image" src="https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}" alt="movie">
+            <img class="carrousel-item__image" src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="movie">
             <div class="carrousel-item__details">
                 <div class="carrousel-item__options">
                     <p class="carrouse-item__details--title">{{movie.title}}</p>
@@ -41,9 +41,39 @@
               </button>
         </div>
     </section>
-    <section class="movies">
+    <section class="popular-movies">
         <div class="movie-info">
             <span class="movie-info--title">POPULAR RIGHT NOW</span>
+            <div class="movie-info--more">
+                <span>SEE ALL</span>
+                <button class="" mat-icon-button aria-label="keyboard_arrow_right">
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div class="box-movies">
+            <div class="row movie-slider">
+                <div class="col-xs-12 movie-slider__container">
+                    <div class="col-lg-3 movie-slider__item" *ngFor="let movie of movies">
+                        <img class="movie-slider-item__image" src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="movie">
+
+                    </div>
+                </div>
+                <div class="movie-slider-buttons">
+                    <button class="movie-slider-button__icon" mat-icon-button aria-label="keyboard_arrow_left">
+                        <mat-icon>keyboard_arrow_left</mat-icon>
+                    </button>
+                    <button class="movie-slider-button__icon" mat-icon-button aria-label="keyboard_arrow_right">
+                        <mat-icon>keyboard_arrow_right</mat-icon>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="popular-movies__children">
+        <div class="movie-info">
+            <span class="movie-info--title">POPULAR CHILDREN</span>
             <div class="movie-info--more">
                 <span>SEE ALL</span>
                 <button class="" mat-icon-button aria-label="keyboard_arrow_right">

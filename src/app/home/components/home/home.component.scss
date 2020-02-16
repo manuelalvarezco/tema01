@@ -97,7 +97,8 @@
     margin: 0 7px;
 }
 
-.movies {
+.popular-movies,
+.popular-movies__children {
     margin-top: 2%;
 }
 
@@ -109,8 +110,9 @@
 }
 
 .movie-info--title {
-    font-size: 1.3em;
+    font-size: 15px;
     font-weight: 500;
+    color: #757575;
 }
 
 .movie-slider {
@@ -170,4 +172,13 @@
 
 .movie-slider-button__icon {
     color: rgb(22, 17, 17);
+}
+
+@media only screen and (max-width:767px) {
+    .carrousel-item {
+        width: auto;
+    }
+    .carrousel-item__image {
+        width: auto;
+    }
 }

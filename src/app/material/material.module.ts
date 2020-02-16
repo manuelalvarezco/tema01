@@ -5,6 +5,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 
 
@@ -14,7 +16,8 @@ const material = [
   MatToolbarModule,
   MatInputModule,
   MatIconModule,
-  MatSelectModule
+  MatSelectModule,
+  MatFormFieldModule
 ];
 
 @NgModule({

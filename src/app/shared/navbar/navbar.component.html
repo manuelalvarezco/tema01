@@ -1,7 +1,12 @@
 <mat-toolbar>
     <div class="toolbar">
-        <div class="toolbar__logo">
-            MovieApp
+        <div class="toolbar-menu">
+            <button class="toolbar-menu__icon" mat-icon-button color="primary" aria-label="menu">
+                <mat-icon>menu</mat-icon>
+              </button>
+            <h1 class="toolbar-menu__logo">
+                MovieApp
+            </h1>
         </div>
         <div class="toolbar-items">
             <div class="toolbar__item">
@@ -11,13 +16,21 @@
             <div class="toolbar__item">
                 <a [routerLink]="['/movies']" routerLinkActive="router-link-active">Movies</a>
             </div>
-            <div class="toolbar__item">Series</div>
-            <div class="toolbar__item">Recently added</div>
+            <div class="toolbar__item">
+                <a [routerLink]="['/movies']" routerLinkActive="router-link-active">Series</a>
+
+            </div>
+            <div class="toolbar__item">
+                <a [routerLink]="['/movies']" routerLinkActive="router-link-active">Recently added</a>
+
+            </div>
         </div>
-        <div class="toolbar__btnSearch">
-            <button mat-icon-button color="primary" aria-label="search">
-                <mat-icon>search</mat-icon>
-              </button>
+        <div class="toolbar-btnSearch">
+            <form class="toolbar-btnSearch__form">
+                <input class="toolbar-btnSearch__input" matInput placeholder="Search movies">
+                <mat-icon class="toolbar-btnSearch__icon" matSuffix>search</mat-icon>
+            </form>
+
         </div>
     </div>
 </mat-toolbar>

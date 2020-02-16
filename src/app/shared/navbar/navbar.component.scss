@@ -8,6 +8,7 @@ mat-toolbar {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 
 .toolbar-items {
@@ -16,4 +17,71 @@ mat-toolbar {
 
 .toolbar__item {
     margin: 0 12px;
+}
+
+.toolbar__item a {
+    text-decoration: none;
+    color: #999;
+    padding: 0 12px;
+    font-size: 16px;
+}
+
+.mat-form-field-wrapper {
+    padding-bottom: 0!important;
+}
+
+.toolbar-btnSearch__form {
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 2px 16px;
+}
+
+.toolbar-btnSearch__input {
+    color: #999;
+    font-size: 16px;
+}
+
+.toolbar-btnSearch__input::placeholder {
+    font-size: 16px;
+}
+
+.menu {
+    display: none;
+}
+
+@media only screen and (max-width:767px) {
+    .menu {
+        display: inline-block;
+    }
+    .mat-toolbar {
+        margin: 30px 0 0 0;
+    }
+    .toolbar__logo {
+        width: 100%;
+        text-align: center;
+    }
+    .toolbar-btnSearch {
+        width: 100%;
+        margin: 16px 0;
+    }
+    .toolbar {
+        align-items: center;
+        flex-direction: column;
+    }
+    .toolbar-menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .toolbar-menu__logo {
+        display: inline-block;
+        margin: 0 25%;
+    }
+    .toolbar-items {
+        display: none;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 }
